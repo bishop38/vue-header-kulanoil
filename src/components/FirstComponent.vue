@@ -1,5 +1,5 @@
 <template>
-  <div class="row box_shadow">
+  <div class="header box_shadow">
     <span class="logo">
       <img src="../../public/logos/logo-90x90.jpeg" alt="" />
     </span>
@@ -28,7 +28,13 @@
         </ul>
       </div>
       <div class="buttomNavContainer">
-        <button class="addVehicleButton">{{ button.addVehicle }}</button>
+        <div class="buttomNavContainer_left">
+          <button class="addVehicleButton">
+            <img src="../../public/logos/car.png" class="car_img" alt="" />{{
+              button.addVehicle
+            }}
+          </button>
+        </div>
         <input
           class="input"
           type="search"
@@ -59,7 +65,11 @@
             alt=""
           />
         </button>
-        <button class="price_button">{{ button.price }}</button>
+        <button class="price_button">
+          <img src="../../public/logos/shop.png" class="shop_img" alt="" />{{
+            button.price
+          }}
+        </button>
       </div>
     </div>
   </div>
@@ -91,7 +101,7 @@ export default {
 </script>
 
 <style>
-.row {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -115,20 +125,30 @@ export default {
   display: flex;
   flex-direction: column;
   /* background-color: aqua; */
-  height: 90px;
+  height: 96px;
+}
+.buttomNavContainer_left {
+  display: flex;
+  align-items: center;
+}
+.car_img {
+  margin-bottom: -3px;
+  margin-left: -44px;
+  margin-right: 20px;
+  width: 22.23px;
+  height: 14.18px;
 }
 .buttomNavContainer {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  margin-top: 2px;
 }
 .addVehicleButton {
   width: 310px;
   height: 46px;
   font-size: 12px;
   background-color: #ffffff;
-  /* #BFBFBF */
   border: 1px solid #bfbfbf;
-  box-sizing: border-box;
   border-radius: 3px;
 }
 .input {
@@ -137,11 +157,13 @@ export default {
   border-radius: 3px;
   width: 529px;
   margin-left: 20px;
+  padding-left: 20px;
 }
 .rightNavContainer {
   display: flex;
   flex-direction: column;
   margin-left: 80px;
+  /* background-color: #69697e; */
 }
 .rightNavContainer_top {
   display: flex;
@@ -153,6 +175,8 @@ export default {
 .rightNavContainer_bottom {
   display: flex;
   justify-content: space-between;
+  /* background-color: red; */
+  margin-top: 2px;
 }
 .favorite_img,
 .orders_img {
@@ -178,6 +202,13 @@ export default {
   box-sizing: border-box;
   border-radius: 3px;
   margin-left: 5px;
+  padding-bottom: 4px;
+}
+.shop_img {
+  width: 16px;
+  height: 16px;
+  margin-bottom: -2px;
+  margin-right: 9px;
 }
 ul {
   display: flex;
