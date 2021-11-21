@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "data_id": "0",
+      "data_name": "Каталоги",
+      "data_logo": "logo1.png"
+    },
+    {
+      "data_id": "1",
+      "data_name": "Шины",
+      "data_logo": "logo2.png"
+    },
+    {
+      "data_id": "2",
+      "data_name": "Аккумуляторы",
+      "data_logo": "logo3.png"
+    },
+    {
+      "data_id": "3",
+      "data_name": "Автоэлектрика и автолампы",
+      "data_logo": "logo4.png"
+    },
+    {
+      "data_id": "4",
+      "data_name": "Щетки",
+      "data_logo": "logo5.png"
+    },
+    {
+      "data_id": "5",
+      "data_name": "Фильтры",
+      "data_logo": "logo6.png"
+    },
+
+    {
+      "data_id": "7",
+      "data_name": "Жидкости и автохимия",
+      "data_logo": "logo7.png"
+    },
+    {
+      "data_id": "8",
+      "data_name": "Смазочные материалы и трансмиссия",
+      "data_logo": "logo8.png"
+    },
+    {
+      "data_id": "9",
+      "data_name": "Диски",
+      "data_logo": "logo9.png"
+    }
+  ]
+}

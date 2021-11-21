@@ -1,7 +1,7 @@
 <template>
   <div class="header box_shadow">
-    <span class="logo">
-      <img src="../../public/logos/logo-90x90.jpeg" alt="" />
+    <span>
+      <img class="logo" src="../../public/logos/logo-90x90.png" alt="" />
     </span>
     <div class="middleNav">
       <div class="topNavContainer">
@@ -35,12 +35,16 @@
             }}
           </button>
         </div>
+
         <input
           class="input"
           type="search"
           placeholder="Поиск по артикулу или VIN-коду"
           size="50"
         />
+        <button class="submit_button">
+          <img class="logo_search" src="../../public/logos/search.png" alt="" />
+        </button>
       </div>
     </div>
     <div class="rightNavContainer">
@@ -91,7 +95,7 @@ export default {
       },
       button: {
         addVehicle: "Добавить транспортное средство",
-        orders: "з",
+
         favorite: "../../public/logos/favorite.png",
         price: "Нет товара",
       },
@@ -101,6 +105,9 @@ export default {
 </script>
 
 <style>
+html {
+  font-family: "SF Pro Display", sans-serif;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -111,8 +118,11 @@ export default {
 }
 .logo {
   margin-right: 20px;
-  /* width: 90px;
-  height: 90px; */
+  width: 90px;
+  height: 90px;
+}
+.topNavContainer {
+  width: 842px;
 }
 .phone_img {
   width: 18.5px;
@@ -124,8 +134,8 @@ export default {
 .middleNav {
   display: flex;
   flex-direction: column;
-  /* background-color: aqua; */
   height: 96px;
+  width: 860px;
 }
 .buttomNavContainer_left {
   display: flex;
@@ -158,6 +168,17 @@ export default {
   width: 529px;
   margin-left: 20px;
   padding-left: 20px;
+  height: 46px;
+}
+.logo_search {
+  width: 14px;
+  height: 14px;
+  margin-left: -40px;
+  padding-right: 30px;
+}
+.submit_button {
+  background: #ffffff;
+  border: none;
 }
 .rightNavContainer {
   display: flex;

@@ -1,64 +1,83 @@
 <template>
-  <div class="bottomNavContainer row">
-    <ul>
-      <li class="bottomNavItem1">
-        <a href="">{{ buttomHeaderList.catalogs }}</a>
-      </li>
-      <li class="bottomNavItem2">
-        <a href="">{{ buttomHeaderList.tires }}</a>
-      </li>
-      <li class="bottomNavItem3">
-        <a href="">{{ buttomHeaderList.batteries }}</a>
-      </li>
-      <li class="bottomNavItem4">
-        <a href="">{{ buttomHeaderList.autoElectricks }}</a>
-      </li>
-      <li class="bottomNavItem5">
-        <a href="">{{ buttomHeaderList.brushes }}</a>
-      </li>
-      <li class="bottomNavItem6">
-        <a href="">{{ buttomHeaderList.filters }}</a>
-      </li>
-      <li class="bottomNavItem7">
-        <a href="">{{ buttomHeaderList.liquids }}</a>
-      </li>
-      <li class="bottomNavItem8">
-        <a href="">{{ buttomHeaderList.oils }}</a>
-      </li>
-      <li class="bottomNavItem9">
-        <a href="">{{ buttomHeaderList.rims }}</a>
-      </li>
-    </ul>
+  <div class="header">
+    <div class="row">
+      <div class="bottomNavContainer">
+        <ul>
+          <ul v-for="data in myJson.data" :key="data.objectID">
+            <li class="bottomNavItem" v-if="data.data_id !== '8'">
+              <a href=""
+                ><button class="button_item">
+                  <img
+                    class="img_logo"
+                    :src="require(`../../public/logos/${data.data_logo}`)"
+                    alt=""
+                  />
+                  {{ data.data_name }}
+                </button>
+              </a>
+            </li>
+            <li class="" id="el_8" v-else>
+              <a href=""
+                ><button class="button_item">
+                  <img
+                    class="img_logo"
+                    :src="require(`../../public/logos/${data.data_logo}`)"
+                    alt=""
+                  />
+                  {{ data.data_name }}
+                </button></a
+              >
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import request from "../../public/request.json";
+
 export default {
   data() {
     return {
-      buttomHeaderList: {
-        catalogs: "Каталоги",
-        tires: "Шины",
-        batteries: "Аккумуляторы",
-        autoElectricks: "Автоэлектрика и автолампы",
-        brushes: "Щетки",
-        filters: "Фильтры",
-        liquids: "Жидкости и автохимия",
-        oils: "Смазочные материалы",
-        rims: "Диски",
-      },
+      myJson: request,
     };
   },
 };
 </script>
 
 <style>
-.bottomNavContainer {
-  display: flex;
-  justify-content: space-between;
+.row {
+  min-width: 1298px;
+  justify-content: space-around;
 }
-.bottomNavItem8 {
-  max-height: 70px;
-  min-width: 95px;
+.bottomNavContainer {
+  margin-top: 10px;
+  justify-items: space-between;
+}
+.bottomNavItem {
+  max-width: 97px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: flex-start;
+}
+#el_8 {
+  width: 169px;
+}
+.button_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  border: none;
+  font-style: "SF Pro Display";
+}
+.img_logo {
+  /* width: 40.9px; */
+  height: 24px;
+  align-self: center;
+  margin-bottom: 7px;
 }
 </style>

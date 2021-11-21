@@ -5,12 +5,12 @@
 
 <script>
 import SecondComponent from "./components/SecondComponent.vue";
+
 export default {
   components: { SecondComponent },
 
   data() {
     return {};
   },
-  methods: {},
 };
 </script>
